@@ -1,0 +1,116 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[english,danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{listings}
+% \usepackage{url}
+% \usepackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{
+    margin=2.57cm,
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\lstset{
+    basicstyle=\ttfamily,
+    xleftmargin=-.2\textwidth, xrightmargin=.2\textwidth
+}
+\graphicspath{{imgs/}}
+\setlength{\parindent}{0pt}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{side \thepage\ af \pageref{LastPage}}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{subfiles}
+
+\begin{document}
+    \subfile{texfiles/titlepage}
+    \pagenumbering{roman}
+    \begin{multicols*}{2}
+        \setlength{\parindent}{0pt}
+        \Huge
+        \textbf{Navn på rapporten}
+        \newline
+
+        \large
+        \textbf{Proffesionshøjskolen UCN}
+        \newline
+
+        \normalsize
+        IT-Uddannelserne
+        \newline
+
+        \large
+        \textbf{Datamatiker}
+        \newline
+
+        \normalsize
+        Hold: DMAAI0920
+        \newline
+
+        \textbf{Gruppemedlemmer:}
+        \newline
+        \emph{
+            Navne på gruppemedlemmer\newline
+        }
+        \newline
+        \textbf{Projektvedler(e):}\newline
+        \emph{
+            Navne på de eller den projektveleder der nu er\newline
+        }
+        \newline
+
+        \textbf{Anslag:}
+        \newline
+        UKENDT
+        \newline
+        \newline
+        \textbf{Normalsider:}
+        \newline
+        UKENDT
+        \newline
+        \vfill\null
+        \columnbreak
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \selectlanguage{english}
+        \begin{abstract}
+            \noindent
+            Her kommer abstractet til at stå
+        \end{abstract}
+    \end{multicols*}
+
+    \Huge
+    \section*{Forord}
+        \normalsize
+        Her er der til forord
+        \pagebreak
+
+        \tableofcontents
+
+        \pagebreak
+        \pagestyle{fancy}
+
+        \pagenumbering{arabic}
+        % Start selve rapporten her
+        
+        \section{Konklusion}
+
+        \bibliographystyle{plain}
+        \bibliography{ref}
+
+        \section{Bilag:}
+        % Et bilag i form af sin egen side kan være
+            %  \subfile{texfiles/hvad-filen-hedder}
+\end{document}
